@@ -1,8 +1,8 @@
 export default class UserInfo{
-	constructor(name,age, email){
-    	this.name=name;
-      	this.age=age;
+	constructor(name,surname, email, weight){
+    	  this.name = name;
+      	this.surname = surname;
         this.email = email;
-        this.weight = 0;
+        this.weight = weight;
     }
 }

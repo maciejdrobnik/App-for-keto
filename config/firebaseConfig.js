@@ -16,4 +16,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const users = collection(db, 'Users');
-export {auth, users, db};
+export {auth, users, db, app};
