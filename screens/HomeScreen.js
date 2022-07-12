@@ -41,27 +41,32 @@ function presentWeight(weight){
       return data;
 }
 export default function HomeScreen(){
-    const chartConfig = {
-        backgroundGradientFrom: "#1E2923",
-        backgroundGradientFromOpacity: 0,
-        backgroundGradientTo: "#08130D",
-        backgroundGradientToOpacity: 0.5,
-        color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-        strokeWidth: 2, // optional, default 3
-        barPercentage: 0.5,
-        useShadowColorFromDataset: false // optional
-      };
-    const screenWidth = Dimensions.get("window").width;
+    // const chartConfig = {
+    //     backgroundGradientFrom: "#1E2923",
+    //     backgroundGradientFromOpacity: 0,
+    //     backgroundGradientTo: "#08130D",
+    //     backgroundGradientToOpacity: 0.5,
+    //     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+    //     strokeWidth: 2, // optional, default 3
+    //     barPercentage: 0.5,
+    //     useShadowColorFromDataset: false // optional
+    //   };
+    // const screenWidth = Dimensions.get("window").width;
     let user  = getUserInfo();
     const data = presentWeight(user.weight)
     return(
         <View>
-           <LineChart
+          <Text>4 Days ago {user.weight[0]}</Text>
+          <Text>3 Days ago {user.weight[1]}</Text>
+          <Text>2 Days ago {user.weight[2]}</Text>
+          <Text>1 Day ago {user.weight[3]}</Text>
+          <Text>Today {user.weight[4]}</Text>
+           {/* <LineChart
             data={data}
             width={screenWidth}
             height={220}
             chartConfig={chartConfig}
-            />
+            /> */}
         </View>
     )
 }
